@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Test ModelMap</h2>
+<ul>
+<li th:text="${ec}"></li>
+<li th:text="${frm}"></li>
+</ul>
+<h3>th:each</h3>
+ 
+    <ul>
+        <th:block th:each="tab: ${t}">
+            <li th:text="${tab}"></li>
+        </
+
+>
+    </ul>
+ <h3>List</h3>
+ 
+    <ul>
+        <th:block th:each="l: ${list}">
+            <li th:text="${l}"></li>
+        </th:block>
+    </ul>
+    
+     <h3>Animals list</h3>
+ 
+    <ul>
+        <th:block th:each="list: ${animals}">
+     
+              <li > <p><span th:text="${list.nom}"></span>  <span th:text="${list.age}"></span></p></li>
+        </th:block>
+    </ul>
+    
+         <h3>Animals list 2</h3>
+ 
+    <ul>
+        <th:block th:each="list: ${animals}">
+            <li th:text="${list}"></li>
+        </th:block>
+    </ul>
+    
+         <h3>Request Param</h3>
+         <p th:text="${msg}"></p>
+    
+</body>
+</html>
